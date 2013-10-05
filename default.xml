@@ -396,7 +396,7 @@
   <project path="vendor/htc"               name="proprietary_vendor_htc"                       remote="teemo" revision="padroid" />
   <project path="kernel/htc/endeavoru"     name="CyanogenMod/android_kernel_htc_endeavoru"     remote="cm"    revision="cm-10.2" />
   <project path="device/htc/endeavoru"     name="CyanogenMod/android_device_htc_endeavoru"     remote="cm"    revision="cm-10.2" />
-  <project path="device/htc/tegra3-common" name="CyanogenMod/android_device_htc_tegra3-common" remote="teemo" revision="padroid" />
+  <project path="device/htc/tegra3-common" name="android_device_htc_tegra3-common" remote="teemo" revision="padroid" />
 
   <!-- Endeavoru ADDS -->
   <project path="hardware/ti/wlan" name="android_hardware_ti_wlan" remote="teemo" revision="cm-10.2" />

@@ -400,7 +400,8 @@
 
   <!-- Endeavoru ADDS -->
   <project path="hardware/ti/wlan" name="android_hardware_ti_wlan" remote="teemo" revision="cm-10.2" />
-  <project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="teemo" revision="padroid" />
+  <!-- project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="teemo" revision="padroid" / -->
+  <project path="external/wpa_supplicant_8_ti" name="hostap" remote="teemo" revision="padroid" />
   <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" remote="cm" revision="cm-10.2" />
 
   <!-- CM ADDS  -->

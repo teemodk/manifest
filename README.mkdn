@@ -9,6 +9,7 @@ I have build PA in a 52GB VirtualBox in Win7. It was just enough to compile, no 
 
 Follow [this guide](http://forum.xda-developers.com/showpost.php?p=30958867&postcount=1) to setup linux for PA compiling.
 Only follow these steps:
+
     # Install OpenSSL, for Python
     # Install Dependencies
     # Configure USB
@@ -20,35 +21,44 @@ Exit gokussjx guide and continue.
 Download your favorite arm toolchain, [this one](http://releases.linaro.org/13.05/components/android/toolchain/4.8) works for me.
 Just extract the archive to any folder with user access, later you will point the build system to the /bin folder of the toolchain.
 
-Install [CCACHE](http://en.wikipedia.org/wiki/Ccache):
+Optionally install [CCACHE](http://en.wikipedia.org/wiki/Ccache):
+
     $ sudo apt-get install ccache
 Activate it in "~/.bashrc":
+
     # use ccache
     export USE_CCACHE=1
 You can change max-cache size, 16G should be enough for this build.
 From terminal:
+
     $ ccache -M 16G
 
 Install [Repo](http://source.android.com/source/using-repo.html):
+
     $ mkdir ~/bin
     $ PATH=~/bin:$PATH
     $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
     $ chmod a+x ~/bin/repo
 
 Download the build manifest:
+
     $ mkdir -p padroid/system
     $ cd  padroid/system
     $ repo init -u git://github.com/teemodk/manifest.git -b padroid
 
 Create folder:
+
     $ mkdir .repo/local_manifests
 Create .repo/local_manifests/local_manifests.xml:
+
     <manifest>
     </manifest>
 Get the source:
+
     $ repo sync
 
 Find this section in "build/envsetup.sh" and update with your favorite arm toolchain:
+
     case $ARCH in
         x86) toolchaindir=x86/i686-linux-android-$targetgccversion/bin
             ;;
@@ -58,6 +68,7 @@ Find this section in "build/envsetup.sh" and update with your favorite arm toolc
             ;;
 
 Go!
+
     $ ./rom-build.sh endeavoru
 
 Thats all. If it went well, get your new ROM in "out/target/product/endeavoru"

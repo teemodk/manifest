@@ -1,39 +1,63 @@
-ParanoidAndroid
-===============
+Porting ParanoidAndroid to Endeavoru
+====================================
 
-Submitting Patches
-------------------
-We're open source, and patches are always welcome!
-You can send patches by using these commands:
+To get started building PA for OneX International, just follow a few simple steps:
 
-    cd <workspace>
-    repo start <branch> ParanoidAndroid/<project>
-    cd <project>
-    git add -A
-    git commit -a
-    cd <workspace>
-    repo upload ParanoidAndroid/<project>
+You need a linux setup.
+Install as your main system or run it in windows with virtualbox. Ubuntu, Mint Debian 64 or similar.
+I have build PA in a 52GB VirtualBox in Win7. It was just enough to compile, no room for ccache!
 
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
+Follow [this guide](http://forum.xda-developers.com/showpost.php?p=30958867&postcount=1) to setup linux for PA compiling.
+Only follow these steps:
+    # Install OpenSSL, for Python
+    # Install Dependencies
+    # Configure USB
+    # JAVA JDK Installation
+    # Python Installation (just pick option 1)
+    # Android SDK
+Exit gokussjx guide and continue.
 
-If you are going to make extra additions, just repeat steps (Don't repo start again), but instead of git commit -a
-use git commit --amend. Gerrit will recognize it as a new patchset.
+Download your favorite arm toolchain, [this one](http://releases.linaro.org/13.05/components/android/toolchain/4.8) works for me.
+Just extract the archive to any folder with user access, later you will point the build system to the /bin folder of the toolchain.
 
-To view the status of your and others patches, visit [ParanoidAndroid Code Review](http://gerrit.paranoidandroid.co)
+Install [CCACHE](http://en.wikipedia.org/wiki/Ccache):
+    $ sudo apt-get install ccache
+Activate it in "~/.bashrc":
+    # use ccache
+    export USE_CCACHE=1
+You can change max-cache size, 16G should be enough for this build.
+From terminal:
+    $ ccache -M 16G
 
+Install [Repo](http://source.android.com/source/using-repo.html):
+    $ mkdir ~/bin
+    $ PATH=~/bin:$PATH
+    $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+    $ chmod a+x ~/bin/repo
 
-Getting Started
----------------
+Download the build manifest:
+    $ mkdir -p padroid/system
+    $ cd  padroid/system
+    $ repo init -u git://github.com/teemodk/manifest.git -b padroid
 
-To get started with ParanoidAndroid, you'll need to get
-familiar with [Git and Repo](http://source.android.com/download/using-repo).
+Create folder:
+    $ mkdir .repo/local_manifests
+Create .repo/local_manifests/local_manifests.xml:
+    <manifest>
+    </manifest>
+Get the source:
+    $ repo sync
 
-To initialize your local repository using the ParanoidAndroid trees, use a command like this:
+Find this section in "build/envsetup.sh" and update with your favorite arm toolchain:
+    case $ARCH in
+        x86) toolchaindir=x86/i686-linux-android-$targetgccversion/bin
+            ;;
+        arm) toolchaindir=~/toolchain/linaro4.8/bin
+            ;;
+        mips) toolchaindir=mips/mipsel-linux-android-$targetgccversion/bin
+            ;;
 
-    repo init -u git@github.com:ParanoidAndroid/manifest.git -b <branch>
+Go!
+    $ ./rom-build.sh endeavoru
 
-Then to sync up:
-
-    repo sync
-
-For information on how to build, check [Here](https://github.com/ParanoidAndroid/paranoid)
+Thats all. If it went well, get your new ROM in "out/target/product/endeavoru"

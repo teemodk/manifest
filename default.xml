@@ -371,7 +371,7 @@
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
   <project path="system/bluetooth" name="platform/system/bluetooth" groups="pdk" />
-  <project path="system/core" name="ParanoidAndroid/android_system_core" remote="github" revision="jb43-legacy"  />
+  <!-- project path="system/core" name="ParanoidAndroid/android_system_core" remote="github" revision="jb43-legacy"  / -->
   <project path="system/extras" name="ParanoidAndroid/android_system_extras" remote="github" revision="jb43"/>
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="CyanogenMod/android_system_netd" remote="cm" revision="cm-10.2" groups="pdk" />
@@ -422,6 +422,7 @@
   <project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" remote="cm" revision="cm-10.2" />
   <project path="external/vim" name="CyanogenMod/android_external_vim" remote="cm" revision="cm-10.2" />
   <project path="frameworks/base" name="CyanogenMod/android_frameworks_base" remote="github" revision="cm-10.2" />
+  <project path="system/core" name="CyanogenMod/android_system_core" remote="cm" revision="cm-10.2"  />
   
   <project path="paranoid" name="ParanoidAndroid/paranoid" remote="github" revision="jb43" >
     <copyfile src="build.sh" dest="rom-build.sh" />    

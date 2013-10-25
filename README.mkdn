@@ -46,13 +46,6 @@ Download the build manifest:
     $ cd  padroid/system
     $ repo init -u git://github.com/teemodk/manifest.git -b padroid
 
-Create folder:
-
-    $ mkdir .repo/local_manifests
-Create .repo/local_manifests/local_manifests.xml:
-
-    <manifest>
-    </manifest>
 Get the source:
 
     $ repo sync
@@ -62,7 +55,7 @@ Find this section in "build/envsetup.sh" and update with your favorite arm toolc
     case $ARCH in
         x86) toolchaindir=x86/i686-linux-android-$targetgccversion/bin
             ;;
-        arm) toolchaindir=~/toolchain/linaro4.8/bin
+        arm) toolchaindir=~/toolchain/linaro/bin
             ;;
         mips) toolchaindir=mips/mipsel-linux-android-$targetgccversion/bin
             ;;

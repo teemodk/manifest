@@ -44,7 +44,7 @@ Download the build manifest:
 
     $ mkdir -p padroid/system
     $ cd  padroid/system
-    $ repo init -u git://github.com/teemodk/manifest.git -b padroid
+    $ repo init -u git://github.com/teemodk/manifest.git -b next
 
 Create folder:
 

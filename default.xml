@@ -8,9 +8,6 @@
            fetch="https://github.com"
            review="gerrit.paranoidandroid.co" />
 
-  <remote  name="teemo"
-           fetch="git://github.com/teemodk" />
-
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
@@ -27,7 +24,6 @@
            sync-f="true"
            sync-j="4" />
 
-  <!-- project path="build" name="android_build" remote="teemo" revision="jb43-legacy" -->
   <project path="build" name="ParanoidAndroid/android_build" remote="github" revision="jb43-legacy" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
@@ -54,7 +50,7 @@
   <project path="device/generic/mini-emulator-mips" name="device/generic/mini-emulator-mips" groups="pdk" />
   <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="pdk" />
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
-  <project path="device/sample" name="device/sample" groups="pdk" />
+  <project path="device/sample" name="CyanogenMod/android_device_sample" remote="cm" revision="cm-10.2" groups="device" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" />
   <project path="external/android-mock" name="platform/external/android-mock" />
@@ -78,6 +74,7 @@
   <project path="external/chromium-trace" name="platform/external/chromium-trace" groups="pdk" />
   <project path="external/clang" name="platform/external/clang" groups="pdk" />
   <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" />
+  <project path="external/crda" name="CyanogenMod/android_external_crda" remote="cm" revision="cm-10.2" />
   <project path="external/dexmaker" name="platform/external/dexmaker" />
   <project path="external/dhcpcd" name="platform/external/dhcpcd" />
   <project path="external/dnsmasq" name="platform/external/dnsmasq" groups="pdk" />
@@ -176,7 +173,7 @@
   <project path="external/open-vcdiff" name="platform/external/open-vcdiff" />
   <project path="external/opencv" name="platform/external/opencv" />
   <project path="external/openfst" name="platform/external/openfst" />
-  <!-- project path="external/openssh" name="platform/external/openssh" / -->
+  <project path="external/openssh" name="platform/external/openssh" />
   <project path="external/openssl" name="platform/external/openssl" groups="pdk" />
   <project path="external/oprofile" name="platform/external/oprofile" />
   <project path="external/pigz" name="CyanogenMod/android_external_pigz" remote="cm" revision="cm-10.2" />
@@ -217,7 +214,7 @@
   <project path="external/webkit" name="platform/external/webkit" />
   <project path="external/webp" name="ParanoidAndroid/android_external_webp" remote="github" revision="jb43" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
-  <!-- project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" / -->
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
   <project path="external/yaffs2" name="CyanogenMod/android_external_yaffs2" remote="cm" revision="cm-10.2" groups="pdk" />
@@ -263,7 +260,7 @@
   <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" groups="exynos5" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
-  <!-- project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" / -->
+  <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
   <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" />
   <project path="libcore" name="CyanogenMod/android_libcore" remote="cm" revision="cm-10.2" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
@@ -278,7 +275,7 @@
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
   <project path="packages/apps/Contacts" name="CyanogenMod/android_packages_apps_Contacts" remote="cm" revision="cm-10.2" />
-  <project path="packages/apps/ContactsCommon" name="CyanogenMod/android_packages_apps_ContactsCommon" remote="cm" revision="cm-10.2" />
+  <project path="packages/apps/ContactsCommon" name="ParanoidAndroid/android_packages_apps_ContactsCommon" remote="github" revision="jb43-legacy" />
   <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
   <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
   <project path="packages/apps/DSPManager" name="CyanogenMod/android_packages_apps_DSPManager" remote="cm" revision="cm-10.2" />
@@ -312,7 +309,7 @@
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" />
   <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" remote="cm" revision="cm-10.2" />
   <project path="packages/experimental" name="platform/packages/experimental" />
-  <!-- project path="packages/inputmethods/LatinIME" name="ParanoidAndroid/android_packages_inputmethods_LatinIME" remote="github" revision="jb43"/ -->
+  <project path="packages/inputmethods/LatinIME" name="ParanoidAndroid/android_packages_inputmethods_LatinIME" remote="github" revision="jb43"/>
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
   <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" />
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
@@ -322,7 +319,7 @@
   <project path="packages/providers/DrmProvider" name="platform/packages/providers/DrmProvider" />
   <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" />
   <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" />
-  <project path="packages/providers/TelephonyProvider" name="CyanogenMod/android_packages_providers_TelephonyProvider" remote="cm" revision="cm-10.2" />
+  <project path="packages/providers/TelephonyProvider" name="ParanoidAndroid/android_packages_providers_TelephonyProvider" remote="github" revision="jb43-legacy" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" />
   <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" />
   <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" />
@@ -371,11 +368,12 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/bluetooth" name="platform/system/bluetooth" groups="pdk" />
+  <project path="system/bluetooth" name="CyanogenMod/android_system_bluetooth" remote="cm" revision="cm-10.2" groups="pdk" />
   <project path="system/core" name="ParanoidAndroid/android_system_core" remote="github" revision="jb43-legacy"  />
   <project path="system/extras" name="ParanoidAndroid/android_system_extras" remote="github" revision="jb43"/>
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="CyanogenMod/android_system_netd" remote="cm" revision="cm-10.2" groups="pdk" />
+  <project path="system/qcom" name="CyanogenMod/android_system_qcom" remote="cm" revision="cm-10.2" groups="qcom" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" remote="cm" revision="cm-10.2" groups="pdk" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
@@ -388,43 +386,11 @@
   <project path="tools/idea" name="platform/tools/idea" groups="notdefault,tools" />
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-  <project path="vendor/pa" name="teemodk/padroid_vendor_pa" remote="github" revision="padroid" />
+  <project path="vendor/pa" name="ParanoidAndroid/android_vendor_pa" remote="github" revision="jb43-legacy" />
   <project path="vendor/tmobile/apps/ThemeChooser" name="ParanoidAndroid/themes-platform-vendor-tmobile-apps-ThemeChooser" remote="github" revision="jb43" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="ParanoidAndroid/android_vendor_tmobile_libs_com.tmobile.themes" remote="github" revision="jb43" />
   <project path="vendor/tmobile/providers/ThemeManager" name="ParanoidAndroid/android_vendor_tmobile_providers_ThemeManager" remote="github" revision="jb43" />
 
-  <!-- Endeavoru Local -->
-  <project path="vendor/htc"               name="proprietary_vendor_htc"           remote="teemo" revision="padroid" />
-  <project path="kernel/htc/endeavoru"     name="android_kernel_htc_endeavoru"     remote="teemo" revision="padroid" />
-  <project path="device/htc/endeavoru"     name="android_device_htc_endeavoru"     remote="teemo" revision="padroid" />
-  <project path="device/htc/tegra3-common" name="android_device_htc_tegra3-common" remote="teemo" revision="padroid" />
-
-  <!-- Endeavoru ADDS -->
-  <project path="hardware/ti/wlan" name="android_hardware_ti_wlan" remote="teemo" revision="cm-10.2" />
-  <!-- project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="teemo" revision="padroid" / -->
-  <project path="external/wpa_supplicant_8_ti" name="hostap" remote="teemo" revision="padroid" />
-  <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" remote="cm" revision="cm-10.2" />
-
-  <!-- CM ADDS  -->
-  <project path="external/bash" name="CyanogenMod/android_external_bash" remote="cm" revision="cm-10.2" />
-  <project path="android_packages_apps_CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" remote="cm" revision="cm-10.2" />
-  <project path="external/exfat" name="CyanogenMod/android_external_exfat" remote="cm" revision="cm-10.2" />
-  <project path="external/fuse" name="CyanogenMod/android_external_fuse" remote="cm" revision="cm-10.2" />
-  <project path="external/htop" name="CyanogenMod/android_external_htop" remote="cm" revision="cm-10.2" />
-  <project path="packages/inputmethods/LatinIME" name="CyanogenMod/android_packages_inputmethods_LatinIME" remote="cm" revision="cm-10.2" />
-  <project path="external/libncurses" name="CyanogenMod/android_external_libncurses" remote="cm" revision="cm-10.2" />
-  <project path="external/lsof" name="CyanogenMod/android_external_lsof" remote="cm" revision="cm-10.2" />
-  <project path="external/lzo" name="CyanogenMod/android_external_lzo" remote="cm" revision="cm-10.2" />
-  <project path="external/nano" name="CyanogenMod/android_external_nano" remote="cm" revision="cm-10.2" />
-  <project path="external/openssh" name="CyanogenMod/android_external_openssh" remote="cm" revision="cm-10.2" />
-  <project path="external/openvpn" name="CyanogenMod/android_external_openvpn" remote="cm" revision="cm-10.2" />
-  <project path="external/powertop" name="CyanogenMod/android_external_powertop" remote="cm" revision="cm-10.2" />
-  <project path="external/rsync" name="CyanogenMod/android_external_rsync" remote="cm" revision="cm-10.2" />
-  <!-- project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" remote="cm" revision="cm-10.2" / -->
-  <project path="external/vim" name="CyanogenMod/android_external_vim" remote="cm" revision="cm-10.2" />
-  <!-- project path="frameworks/base" name="CyanogenMod/android_frameworks_base" remote="github" revision="cm-10.2" / -->
-  <!-- project path="system/core" name="CyanogenMod/android_system_core" remote="cm" revision="cm-10.2"  / -->
-  
   <project path="paranoid" name="ParanoidAndroid/paranoid" remote="github" revision="jb43" >
     <copyfile src="build.sh" dest="rom-build.sh" />    
   </project>

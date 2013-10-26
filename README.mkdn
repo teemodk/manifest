@@ -49,10 +49,16 @@ Download the build manifest:
 Create folder:
 
     $ mkdir .repo/local_manifests
-Create .repo/local_manifests/local_manifests.xml:
+    
+Create .repo/local_manifests/local_manifest.xml:
 
     <manifest>
+      <project path="vendor/htc"               name="teemodk/proprietary_vendor_htc"           remote="github" revision="padroid" />
+      <project path="kernel/htc/endeavoru"     name="teemodk/android_kernel_htc_endeavoru"     remote="github" revision="padroid" />
+      <project path="device/htc/endeavoru"     name="teemodk/android_device_htc_endeavoru"     remote="github" revision="padroid" />
+      <project path="device/htc/tegra3-common" name="teemodk/android_device_htc_tegra3-common" remote="github" revision="padroid" />
     </manifest>
+
 Get the source:
 
     $ repo sync
@@ -62,7 +68,7 @@ Find this section in "build/envsetup.sh" and update with your favorite arm toolc
     case $ARCH in
         x86) toolchaindir=x86/i686-linux-android-$targetgccversion/bin
             ;;
-        arm) toolchaindir=~/toolchain/linaro4.8/bin
+        arm) toolchaindir=~/toolchain/linaro/bin
             ;;
         mips) toolchaindir=mips/mipsel-linux-android-$targetgccversion/bin
             ;;

@@ -11,6 +11,9 @@
   <remote  name="teemo"
            fetch="git://github.com/teemodk" />
 
+  <remote  name="thoemy"
+           fetch="git://github.com/thoemy" />
+
   <remote  name="private"
            fetch="ssh://git@github.com" />
 

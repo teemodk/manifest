@@ -34,7 +34,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="manifest" name="ParanoidAndroid/manifest" remote="github" revision="jb43-legacy" />
+  <project path="manifest" name="manifest" remote="teemo" revision="cm" />
   
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="bionic" name="CyanogenMod/android_bionic" remote="cm" revision="cm-10.2" />
@@ -396,10 +396,10 @@
   <project path="vendor/tmobile/providers/ThemeManager" name="ParanoidAndroid/android_vendor_tmobile_providers_ThemeManager" remote="github" revision="jb43" />
 
   <!-- Endeavoru Local -->
-  <project path="vendor/htc"               name="proprietary_vendor_htc"           remote="thoemy" revision="cm-10.2" />
-  <project path="kernel/htc/endeavoru"     name="CyanogenMod/android_kernel_htc_endeavoru"     remote="cm" revision="cm-10.2" />
-  <project path="device/htc/endeavoru"     name="CyanogenMod/android_device_htc_endeavoru"     remote="cm" revision="cm-10.2" />
-  <project path="device/htc/tegra3-common" name="CyanogenMod/android_device_htc_tegra3-common" remote="cm" revision="cm-10.2" />
+  <project path="vendor/htc"               name="proprietary_vendor_htc"                       remote="thoemy" revision="cm-10.2" />
+  <project path="kernel/htc/endeavoru"     name="CyanogenMod/android_kernel_htc_endeavoru"     remote="cm"     revision="cm-10.2" />
+  <project path="device/htc/endeavoru"     name="CyanogenMod/android_device_htc_endeavoru"     remote="cm"     revision="cm-10.2" />
+  <project path="device/htc/tegra3-common" name="CyanogenMod/android_device_htc_tegra3-common" remote="cm"     revision="cm-10.2" />
 
   <!-- Endeavoru ADDS -->
   <project path="hardware/ti/wlan" name="android_hardware_ti_wlan" remote="teemo" revision="cm-10.2" />

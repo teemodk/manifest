@@ -19,6 +19,7 @@ A full ROM can be build from this, but as of now it WILL NOT BOOT -
 ToDo:
 -----
 - Continue updating the device repos.
+- Probably more work on kernel, maybe some reverts of the mm-patch.
 - Add required LEGACY code back. Examples:
   COMMON_GLOBAL_CFLAGS += -DSK_SUPPORT_LEGACY_DECODEFILE
   https://github.com/teemodk/android_external_skia/commit/c8e3eaf7245aa48ceecf6b50ff89127dc8f8ad2c

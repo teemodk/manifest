@@ -38,7 +38,7 @@ To build:
 
     $ repo init -u git://github.com/omnirom/android.git -b android-6.0
 
-Add device files - copy local_manifests to .repo
+Add device files (copy local_manifests to .repo)
 
 Get the source:
 

@@ -18,15 +18,19 @@ A full ROM can be build from this, but as of now it WILL NOT BOOT -
 
 ToDo:
 -----
+
 - Continue updating the device repos.
 - Probably more work on kernel, maybe some reverts of the mm-patch.
-- Add required LEGACY code back. Examples:
-  COMMON_GLOBAL_CFLAGS += -DSK_SUPPORT_LEGACY_DECODEFILE
-  https://github.com/teemodk/android_external_skia/commit/c8e3eaf7245aa48ceecf6b50ff89127dc8f8ad2c
-  COMMON_GLOBAL_CFLAGS += -DADD_LEGACY_MEMORY_DEALER_CONSTRUCTOR_SYMBOL
-  https://github.com/teemodk/frameworks_native/commit/8917c24017d636aa159dfaeb53a512164467daef
 - Lots of work on SEPolicy
 - Too much patience and time
+- Add required LEGACY code back. Examples:
+
+    COMMON_GLOBAL_CFLAGS += -DSK_SUPPORT_LEGACY_DECODEFILE
+    https://github.com/teemodk/android_external_skia/commit/c8e3eaf7245aa48ceecf6b50ff89127dc8f8ad2c
+    
+    COMMON_GLOBAL_CFLAGS += -DADD_LEGACY_MEMORY_DEALER_CONSTRUCTOR_SYMBOL
+    https://github.com/teemodk/frameworks_native/commit/8917c24017d636aa159dfaeb53a512164467daef
+
 
 
 To build:

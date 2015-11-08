@@ -1,5 +1,5 @@
-WORK IN PROGRESS !!! MM on HTC OneX
-===================================
+WORK IN PROGRESS !!! MM on OneX
+===============================
 
 
 What is done:
@@ -13,12 +13,12 @@ A few repos needed small patches in order to build, see the local manifest.
 
 NOTE:
 -----
-A full ROM can be build from this, but as of now it WILL NOT BOOT
-- it creates the /data/ structure and then reboots to recovery.
+A full ROM can be build from this, but as of now it WILL NOT BOOT -
+ it creates the /data/ structure and then reboots to recovery.
 
 ToDo:
 -----
-- Continue updating the decice repos.
+- Continue updating the device repos.
 - Add required LEGACY code back. Examples:
   COMMON_GLOBAL_CFLAGS += -DSK_SUPPORT_LEGACY_DECODEFILE
   https://github.com/teemodk/android_external_skia/commit/c8e3eaf7245aa48ceecf6b50ff89127dc8f8ad2c

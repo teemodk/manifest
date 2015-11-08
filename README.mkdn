@@ -1,67 +1,53 @@
-Porting ParanoidAndroid to Endeavoru
-====================================
+WORK IN PROGRESS !!! MM on HTC OneX
+===================================
 
-To get started building PA for OneX International, just follow a few simple steps:
 
-You need a linux setup.
-Install as your main system or run it in windows with virtualbox. Ubuntu, Mint Debian 64 or similar.
-I have build PA in a 52GB VirtualBox in Win7. It was just enough to compile, no room for ccache!
+What is done:
+-------------
 
-Follow [this guide](http://forum.xda-developers.com/showpost.php?p=30958867&postcount=1) to setup linux for PA compiling.
-Only follow these steps:
+Staring point is the Grouper update by Dmitry Grinberg: Android M on Nexus 7 2012
+http://dmitry.gr/index.php?r=06.%20Thoughts&proj=04.%20Android%20M%20on%20Grouper
+Most patches are applied to hox, but some bits and pieces are still missing.
 
-    # Install OpenSSL, for Python
-    # Install Dependencies
-    # Configure USB
-    # JAVA JDK Installation
-    # Python Installation (just pick option 1)
-    # Android SDK
-Exit gokussjx guide and continue.
+A few repos needed small patches in order to build, see the local manifest.
 
-Download your favorite arm toolchain, [this one](http://releases.linaro.org/13.05/components/android/toolchain/4.8) works for me.
-Just extract the archive to any folder with user access, later you will point the build system to the /bin folder of the toolchain.
+NOTE:
+-----
+A full ROM can be build from this, but as of now it WILL NOT BOOT
+- it creates the /data/ structure and then reboots to recovery.
 
-Optionally install [CCACHE](http://en.wikipedia.org/wiki/Ccache):
+ToDo:
+-----
+- Continue updating the decice repos.
+- Add required LEGACY code back. Examples:
+  COMMON_GLOBAL_CFLAGS += -DSK_SUPPORT_LEGACY_DECODEFILE
+  https://github.com/teemodk/android_external_skia/commit/c8e3eaf7245aa48ceecf6b50ff89127dc8f8ad2c
+  COMMON_GLOBAL_CFLAGS += -DADD_LEGACY_MEMORY_DEALER_CONSTRUCTOR_SYMBOL
+  https://github.com/teemodk/frameworks_native/commit/8917c24017d636aa159dfaeb53a512164467daef
+- Lots of work on SEPolicy
+- Too much patience and time
 
-    $ sudo apt-get install ccache
-Activate it in "~/.bashrc":
 
-    # use ccache
-    export USE_CCACHE=1
-You can change max-cache size, 16G should be enough for this build.
-From terminal:
+To build:
+---------
 
-    $ ccache -M 16G
+    $ repo init -u git://github.com/omnirom/android.git -b android-6.0
 
-Install [Repo](http://source.android.com/source/using-repo.html):
-
-    $ mkdir ~/bin
-    $ PATH=~/bin:$PATH
-    $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-    $ chmod a+x ~/bin/repo
-
-Download the build manifest:
-
-    $ mkdir -p padroid/system
-    $ cd  padroid/system
-    $ repo init -u git://github.com/teemodk/manifest.git -b padroid
+Add device files - copy local_manifests to .repo
 
 Get the source:
 
     $ repo sync
 
-Find this section in "build/envsetup.sh" and update with your favorite arm toolchain:
+Setup environment:
 
-    case $ARCH in
-        x86) toolchaindir=x86/i686-linux-android-$targetgccversion/bin
-            ;;
-        arm) toolchaindir=~/toolchain/linaro/bin
-            ;;
-        mips) toolchaindir=mips/mipsel-linux-android-$targetgccversion/bin
-            ;;
+    $ . build/envsetup.sh
+    $ lunch omni_endeavoru-userdebug
 
-Go!
+Build:
 
-    $ ./rom-build.sh endeavoru
+    $ mka bacon
 
-Thats all. If it went well, get your new ROM in "out/target/product/endeavoru"
+
+
+

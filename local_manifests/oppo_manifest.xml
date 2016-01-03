@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+        <!-- DEVICE R7PLUSf -->
+    <project name="TheMuppets/proprietary_vendor_oppo"         path="vendor/oppo"                remote="github" revision="cm-13.0" />
+    <project name="teemodk/android_device_oppo_msm8939-common" path="device/oppo/msm8939-common" remote="github" revision="cm-13.0" />
+    <project name="teemodk/android_device_oppo_r7plus"         path="device/oppo/r7plus"         remote="github" revision="cm-13.0" />
+    <project name="teemodk/android_device_oppo_common"         path="device/oppo/common"         remote="github" revision="cm-13.0" />
+    <project name="CyanogenMod/android_kernel_oppo_msm8939"    path="kernel/oppo/msm8939"        remote="github" revision="cm-13.0" />
+
+    <!-- project name="CyanogenMod/cm_platform_sdk"                    path="vendor/cmsdk"               remote="github" revision="cm-13.0" / -->
+
+</manifest>

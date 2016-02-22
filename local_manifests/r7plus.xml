@@ -16,6 +16,6 @@
 
      <!-- Add r7plus to aicp's products -->
   <remove-project name="AICP/vendor_aicp" />
-  <project path="vendor/aicp" name="aicp" remote="teemodk" />
+  <project name="teemodk/aicp" path="vendor/aicp" remote="github" />
 
 </manifest>

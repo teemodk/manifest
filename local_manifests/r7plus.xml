@@ -8,7 +8,7 @@
   <project name="TheMuppets/proprietary_vendor_oppo"      path="vendor/oppo"                 remote="github" revision="cm-13.0" />
 
      <!-- Add kernel for r7plus -->
-  <project name="CyanogenMod/kernel_oppo_msm8939"         path="kernel/oppo/msm8939"         remote="cm" />
+  <project name="CyanogenMod/android_kernel_oppo_msm8939" path="kernel/oppo/msm8939"         remote="cm" />
 
      <!-- Additional stuff from CM13 - might not be needed -->
   <project name="CyanogenMod/android_external_stlport"               path="external/stlport"               remote="cm" />

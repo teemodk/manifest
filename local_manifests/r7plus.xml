@@ -2,13 +2,13 @@
 <manifest>
 
      <!-- Add device repos for r7plus -->
-  <project name="teemodk/device_oppo_r7plus"              path="device/oppo/r7plus"          remote="github" revision="aicp" />
-  <project name="teemodk/device_oppo_msm8939-common"      path="device/oppo/msm8939-common"  remote="github" revision="aicp" />
-  <project name="CyanogenMod/android_device_oppo_common"  path="device/oppo/common"          remote="cm" />
-  <project name="TheMuppets/proprietary_vendor_oppo"      path="vendor/oppo"                 remote="github" revision="cm-13.0" />
+  <project name="teemodk/device_oppo_r7plus"              path="device/oppo/r7plus"          remote="github" revision="aicp-twrp" />
+  <project name="teemodk/device_oppo_msm8939-common"      path="device/oppo/msm8939-common"  remote="github" revision="aicp-twrp" />
+  <project name="teemodk/device_oppo_common"              path="device/oppo/common"          remote="github" revision="aicp-twrp" />
+  <project name="TheMuppets/proprietary_vendor_oppo"      path="vendor/oppo"                 remote="github" revision="aicp-twrp" />
 
      <!-- Add kernel for r7plus -->
-  <project name="CyanogenMod/android_kernel_oppo_msm8939" path="kernel/oppo/msm8939"         remote="cm" />
+  <project name="teemodk/kernel_oppo_msm8939"             path="kernel/oppo/msm8939"         remote="github" revision="aicp-twrp" />
 
      <!-- Additional stuff from CM13 - might not be needed -->
   <project name="CyanogenMod/android_external_stlport"               path="external/stlport"               remote="cm" />

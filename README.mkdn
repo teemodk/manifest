@@ -1,5 +1,5 @@
-[Android Ice Cold Project for Oppo R7Plus](http://aicp-rom.com)
-==========================================
+[TWRP RECOVERY for Oppo R7Plus](http://forum.xda-developers.com/showthread.php?p=32965365)
+===============================
 
 
 Download the Source
@@ -18,14 +18,14 @@ Repo initialization:
 Add device specific files and repo changes (local manifest)
 
     $ mkdir .repo/local_manifests
-    $ curl -o .repo/local_manifests/r7plus.xml https://raw.githubusercontent.com/teemodk/manifest/aicp/local_manifests/r7plus.xml
+    $ curl -o .repo/local_manifests/r7plus.xml https://raw.githubusercontent.com/teemodk/manifest/aicp-twrp/local_manifests/r7plus.xml
      
 
 sync repo (download it all) :
 
     $ repo sync
 
-
+ToDo: add busybox to the build tree (extract bb-zip to external/busybox)
 
 Building
 --------
@@ -35,8 +35,5 @@ After the sync is finished, please read the [instructions from the Android site]
     $ . build/envsetup.sh
     $ lunch aicp_r7plus-userdebug
 
-    $ mka bacon 
-      or
-    $ make -j# bacon
+    $ mka recoveryimage
     
-    replace # with number of cpu threads you want to use

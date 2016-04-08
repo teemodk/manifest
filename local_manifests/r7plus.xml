@@ -4,7 +4,7 @@
      <!-- Add device repos for r7plus -->
   <project name="teemodk/device_oppo_r7plus"              path="device/oppo/r7plus"          remote="github" revision="aicp" />
   <project name="teemodk/device_oppo_msm8939-common"      path="device/oppo/msm8939-common"  remote="github" revision="aicp" />
-  <project name="CyanogenMod/android_device_oppo_common"  path="device/oppo/common"          remote="cm" />
+  <project name="aicp/device_oppo_common"                 path="device/oppo/common"          remote="github" revision="mm6.0" />
   <project name="TheMuppets/proprietary_vendor_oppo"      path="vendor/oppo"                 remote="github" revision="cm-13.0" />
 
      <!-- Add kernel for r7plus -->

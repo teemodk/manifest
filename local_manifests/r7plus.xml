@@ -18,7 +18,8 @@
   <remove-project name="AICP/vendor_aicp" />
   <project name="teemodk/aicp" path="vendor/aicp" remote="github" revision="mm6.0" />
 
-    <!-- fetch the right recovery -->
+    <!-- Fetch recovery and BusyBox from Omnirom -->
   <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-6.0" />
+  <project name="omnirom/android_external_busybox"  path="external/busybox"       remote="github" revision="android-6.0" />
 
 </manifest>

@@ -2,20 +2,27 @@
 <manifest>
 
      <!-- Add device repos for r7plus -->
-  <project name="teemodk/device_oppo_r7plus"              path="device/oppo/r7plus"          remote="github" revision="aicp" />
+  <project name="teemodk/device_oppo_r7plus"              path="device/oppo/r7plus"          remote="github" revision="mr" />
   <project name="teemodk/device_oppo_msm8939-common"      path="device/oppo/msm8939-common"  remote="github" revision="aicp" />
   <project name="aicp/device_oppo_common"                 path="device/oppo/common"          remote="github" revision="mm6.0" />
   <project name="TheMuppets/proprietary_vendor_oppo"      path="vendor/oppo"                 remote="github" revision="cm-13.0" />
 
      <!-- Add kernel for r7plus -->
-  <project name="CyanogenMod/android_kernel_oppo_msm8939" path="kernel/oppo/msm8939"         remote="cm" />
+  <project name="teemodk/android_kernel_oppo_msm8939"     path="kernel/oppo/msm8939"         remote="github" revision="mr" />
 
-     <!-- Additional stuff from CM13 - might not be needed -->
+     <!-- Additional stuff from CM13 -->
   <project name="CyanogenMod/android_external_stlport"               path="external/stlport"               remote="cm" />
   <project name="CyanogenMod/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="cm" />
 
      <!-- Add r7plus to aicp's products -->
   <remove-project name="AICP/vendor_aicp" />
   <project name="teemodk/aicp" path="vendor/aicp" remote="github" revision="mm6.0" />
+
+  <remove-project name="platform/prebuilts/qemu-kernel" />
+  
+    <!-- For TWRP / MultiRom -->
+  <project name="CyanogenMod/android_external_busybox" path="external/busybox" remote="cm" />
+  <project name="teemodk/multirom" path="system/extras/multirom" remote="github" revision="mr" />
+  <project name="Tasssadar/libbootimg" path="system/extras/libbootimg" remote="github" revision="master" />
 
 </manifest>

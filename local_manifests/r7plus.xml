@@ -24,5 +24,6 @@
   <project name="CyanogenMod/android_external_busybox" path="external/busybox" remote="cm" />
   <project name="teemodk/multirom" path="system/extras/multirom" remote="github" revision="mr" />
   <project name="Tasssadar/libbootimg" path="system/extras/libbootimg" remote="github" revision="master" />
+  <project name="Tasssadar/Team-Win-Recovery-Project" path="bootable/recovery-twrp-mr" remote="github" revision="android-6.0" />
 
 </manifest>

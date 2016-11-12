@@ -12,13 +12,13 @@ Initializing Repository
 
 Repo initialization:
 
-    $ repo init -u https://github.com/AICP/platform_manifest.git -b mm6.0
+    $ repo init -u https://github.com/AICP/platform_manifest.git -b n7.1
 
 
 Add device specific files and repo changes (local manifest)
 
     $ mkdir .repo/local_manifests
-    $ curl -o .repo/local_manifests/r7plus.xml https://raw.githubusercontent.com/teemodk/manifest/aicp/local_manifests/r7plus.xml
+    $ curl -o .repo/local_manifests/r7plus.xml https://raw.githubusercontent.com/teemodk/manifest/aicp-n7/local_manifests/r7plus.xml
      
 
 sync repo (download it all) :

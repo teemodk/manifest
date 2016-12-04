@@ -5,7 +5,10 @@
   <project name="teemodk/device_oppo_r7plus"              path="device/oppo/r7plus"          remote="github" revision="aicp-n7" />
   <project name="teemodk/device_oppo_msm8939-common"      path="device/oppo/msm8939-common"  remote="github" revision="aicp-n7" />
   <project name="aicp/device_oppo_common"                 path="device/oppo/common"          remote="github" revision="n7.1" />
-  <project name="TheMuppets/proprietary_vendor_oppo"      path="vendor/oppo"                 remote="github" revision="cm-14.1" />
+
+  <project name="CyanogenMod/android_device_qcom_common"      path="device/qcom/common"          remote="github" revision="cm-14.1" />
+  <project name="TheMuppets/proprietary_vendor_oppo"          path="vendor/oppo"                 remote="github" revision="cm-14.1" />
+  <project name="TheMuppets/proprietary_vendor_qcom_binaries" path="vendor/qcom/binaries"        remote="github" revision="cm-14.1" />
 
      <!-- Add kernel for r7plus -->
   <project name="CyanogenMod/android_kernel_oppo_msm8939" path="kernel/oppo/msm8939"         remote="github" revision="cm-14.1" />
@@ -18,7 +21,7 @@
   <remove-project name="AICP/vendor_aicp" />
   <project name="teemodk/aicp" path="vendor/aicp" remote="github" revision="n7.1" />
 
-    <!-- Fetch recovery from Omnirom -->
-  <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-7.0" />
+    <!-- Fetch recovery -->
+  <project name="teemodk/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="twrp7.1" />
 
 </manifest>

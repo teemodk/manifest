@@ -5,7 +5,7 @@
 Download the Source
 ===================
 
-Please read the [AOSP building instructions](http://source.android.com/source/index.html) before proceeding.
+Please read the [AOSP building requirements](http://source.android.com/source/requirements.html) before proceeding.
 
 Initializing Repository
 -----------------------

@@ -4,7 +4,8 @@
      <!-- Add device repos for r7plus -->
   <project name="teemodk/device_oppo_r7plus"                           path="device/oppo/r7plus"                remote="github" revision="aicp-n7" />
   <project name="teemodk/device_oppo_msm8939-common"                   path="device/oppo/msm8939-common"        remote="github" revision="aicp-n7" />
-  <project name="aicp/device_oppo_common"                              path="device/oppo/common"                remote="github" revision="n7.1" />
+  <project name="lineageos/android_device_oppo_common"                 path="device/oppo/common"                remote="github" revision="cm-14.1" />
+  <!-- project name="aicp/device_oppo_common"                              path="device/oppo/common"                remote="github" revision="n7.1" / -->
 
   <project name="lineageos/android_packages_resources_devicesettings"  path="packages/resources/devicesettings" remote="github" revision="cm-14.1" />
   <project name="lineageos/android_device_qcom_common"                 path="device/qcom/common"                remote="github" revision="cm-14.1" />

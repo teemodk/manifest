@@ -1,4 +1,4 @@
-[Android LineageOS for Oppo R7Plus/R7S](http://aicp-rom.com)
+[Android LineageOS for Oppo R7Plus/R7S](https://github.com/lineageos/android)
 =======================================
 
 

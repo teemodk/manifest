@@ -3,9 +3,9 @@
 
   <!-- teemo / AICP -->
       <project name="teemodk/device_asus_I01WD"                        path="device/asus/I0WD"                  remote="github" revision="p9.0" />
-  <remove-project name="aicp/device_aicp_sepolicy" />
+  <remove-project name="AICP/device_aicp_sepolicy" />
       <project name="teemodk/device_aicp_sepolicy"                     path="device/aicp/sepolicy"              remote="github" revision="p9.0" />
-  <remove-project name="aicp/device_qcom_sepolicy-legacy" />
+  <remove-project name="AICP/device_qcom_sepolicy-legacy" />
       <project name="teemodk/device_qcom_sepolicy-legacy"              path="device/qcom/sepolicy-legacy"       remote="github" revision="p9.0" />
 
   <!-- Vendor & Kernel -->

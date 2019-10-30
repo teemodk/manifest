@@ -2,7 +2,7 @@
 <manifest>
 
   <!-- teemo / AICP -->
-      <project name="teemodk/device_asus_I01WD"                        path="device/asus/I0WD"                  remote="github" revision="p9.0" />
+      <project name="teemodk/device_asus_I01WD"                        path="device/asus/I01WD"                 remote="github" revision="p9.0" />
   <remove-project name="AICP/device_aicp_sepolicy" />
       <project name="teemodk/device_aicp_sepolicy"                     path="device/aicp/sepolicy"              remote="github" revision="p9.0" />
   <remove-project name="AICP/device_qcom_sepolicy-legacy" />

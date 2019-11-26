@@ -9,7 +9,7 @@
       <project name="teemodk/device_qcom_sepolicy-legacy"              path="device/qcom/sepolicy-legacy"       remote="github" revision="p9.0" />
 
   <!-- Vendor & Kernel -->
-   <project name="TheMuppets/proprietary_vendor_asus"                  path="vendor/asus"                       remote="github" revision="lineage-16.0" />
-    <project name="LineageOS/android_kernel_asus_sm8150"               path="kernel/asus/sm8150"                remote="github" revision="lineage-16.0" />
+      <project name="teemodk/proprietary_vendor_asus"                  path="vendor/asus"                       remote="github" revision="p9.0" />
+      <project name="LineageOS/android_kernel_asus_sm8150"             path="kernel/asus/sm8150"                remote="github" revision="lineage-16.0" />
 
 </manifest>

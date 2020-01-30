@@ -2,14 +2,11 @@
 <manifest>
 
   <!-- teemo / AICP -->
-      <project name="teemodk/device_asus_I01WD"                        path="device/asus/I01WD"                 remote="github" revision="p9.0" />
-  <remove-project name="AICP/device_aicp_sepolicy" />
-      <project name="teemodk/device_aicp_sepolicy"                     path="device/aicp/sepolicy"              remote="github" revision="p9.0" />
-  <remove-project name="AICP/device_qcom_sepolicy-legacy" />
-      <project name="teemodk/device_qcom_sepolicy-legacy"              path="device/qcom/sepolicy-legacy"       remote="github" revision="p9.0" />
+      <project name="teemodk/android_device_asus_I01WD"                   path="device/asus/I01WD"                 remote="github" revision="p9.0" />
+      <project name="teemodk/proprietary_vendor_asus"                     path="vendor/asus"                       remote="github" revision="p9.0" />
 
-  <!-- Vendor & Kernel -->
-      <project name="teemodk/proprietary_vendor_asus"                  path="vendor/asus"                       remote="github" revision="p9.0" />
-      <project name="LineageOS/android_kernel_asus_sm8150"             path="kernel/asus/sm8150"                remote="github" revision="lineage-16.0" />
+  <!-- LineageOS -->
+      <project name="LineageOS/android_kernel_asus_sm8150"                path="kernel/asus/sm8150"                remote="github" revision="lineage-16.0" />
+      <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
 
 </manifest>

@@ -2,11 +2,11 @@
 <manifest>
 
   <!-- teemo / AICP -->
-      <project name="teemodk/android_device_asus_I01WD"                   path="device/asus/I01WD"                 remote="github" revision="p9.0" />
-      <project name="teemodk/proprietary_vendor_asus"                     path="vendor/asus"                       remote="github" revision="p9.0" />
+      <!-- project name="teemodk/android_device_asus_I01WD"                   path="device/asus/I01WD"                 remote="github" revision="q10.0" / -->
+      <!-- project name="teemodk/proprietary_vendor_asus"                     path="vendor/asus"                       remote="github" revision="q10.0" / -->
 
   <!-- LineageOS -->
-      <project name="LineageOS/android_kernel_asus_sm8150"                path="kernel/asus/sm8150"                remote="github" revision="lineage-16.0" />
-      <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
+      <project name="LineageOS/android_kernel_asus_sm8150"                path="kernel/asus/sm8150"                remote="github" revision="lineage-17.1" />
+      <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-17.1" />
 
 </manifest>
